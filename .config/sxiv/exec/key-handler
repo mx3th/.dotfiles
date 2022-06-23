@@ -1,0 +1,9 @@
+#!/bin/sh
+
+while read file
+do
+  case "$1" in
+    "w") wal -i $file && pywal-discord && pkill dunst ;;
+    "1") feh --bg-scale $file ;
+  esac
+done
